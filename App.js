@@ -1,11 +1,13 @@
-import {View, Text} from 'react-native';
 import React from 'react';
+import {StatusBar} from 'react-native';
+import NotesList from './src/screens/NotesList/NotesList';
 
 const App = () => {
   return (
-    <View>
-      <Text>Notes App</Text>
-    </View>
+    <>
+      <StatusBar barStyle={'dark-content'} />
+      <NotesList />
+    </>
   );
 };
 
