@@ -1,9 +1,6 @@
 import {StyleSheet} from 'react-native';
 
 const styles = StyleSheet.create({
-  container: {
-    // marginVertical: 10,
-  },
   header: {
     paddingVertical: 10,
     borderBottomWidth: 0.2,
@@ -36,6 +33,7 @@ const styles = StyleSheet.create({
     flex: 1,
     alignItems: 'center',
   },
+  contentContainer: {paddingBottom: 10},
 });
 
 export default styles;

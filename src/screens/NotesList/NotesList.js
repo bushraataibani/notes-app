@@ -33,7 +33,7 @@ const NotesList = () => {
             data={list}
             renderItem={({item}) => <ListItems item={item} />}
             keyExtractor={item => item.id}
-            contentContainerStyle={{paddingBottom: 20}}
+            contentContainerStyle={styles.contentContainer}
           />
         </View>
       </View>
