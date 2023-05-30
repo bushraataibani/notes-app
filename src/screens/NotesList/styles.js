@@ -14,7 +14,7 @@ const styles = StyleSheet.create({
     fontWeight: 'bold',
   },
   body: {
-    marginVertical: 20,
+    paddingVertical: 20,
     marginHorizontal: 10,
   },
   search: {
@@ -30,10 +30,10 @@ const styles = StyleSheet.create({
   },
   list: {
     width: '100%',
-    height: '100%',
+    height: '88%',
   },
   row: {
-    // flex: 1,
+    flex: 1,
     alignItems: 'center',
   },
 });

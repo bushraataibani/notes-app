@@ -28,12 +28,12 @@ const NotesList = () => {
         <View style={styles.list}>
           <FlatList
             key={list.map(item => item.id)}
-            // contentContainerStyle={styles.listContainer}
             columnWrapperStyle={styles.row}
             numColumns={2}
             data={list}
             renderItem={({item}) => <ListItems item={item} />}
             keyExtractor={item => item.id}
+            contentContainerStyle={{paddingBottom: 20}}
           />
         </View>
       </View>
