@@ -28,7 +28,14 @@ const styles = StyleSheet.create({
     fontWeight: 'medium',
     borderColor: '#8a8888',
   },
-  list: {},
+  list: {
+    width: '100%',
+    height: '100%',
+  },
+  row: {
+    // flex: 1,
+    alignItems: 'center',
+  },
 });
 
 export default styles;

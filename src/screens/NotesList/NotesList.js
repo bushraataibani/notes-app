@@ -1,11 +1,13 @@
-import {View, Text, TextInput} from 'react-native';
 import React, {useState} from 'react';
+import {FlatList, Text, TextInput, View} from 'react-native';
+import list from '../../../assets/data/list';
+import ListItems from '../../components/ListItems/ListItems';
 import styles from './styles';
 
 const NotesList = () => {
   const [searchValue, setSearchValue] = useState('');
   return (
-    <View style={styles.container}>
+    <View>
       {/* Header */}
       <View style={styles.header}>
         <Text style={styles.headerText}>Notes App</Text>
@@ -22,10 +24,17 @@ const NotesList = () => {
             placeholder="Search for notes..."
           />
         </View>
-
         {/* List */}
         <View style={styles.list}>
-          <Text>List</Text>
+          <FlatList
+            key={list.map(item => item.id)}
+            // contentContainerStyle={styles.listContainer}
+            columnWrapperStyle={styles.row}
+            numColumns={2}
+            data={list}
+            renderItem={({item}) => <ListItems item={item} />}
+            keyExtractor={item => item.id}
+          />
         </View>
       </View>
     </View>
