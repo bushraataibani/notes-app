@@ -1,15 +1,15 @@
-import {Dimensions, StyleSheet} from 'react-native';
+import {StyleSheet} from 'react-native';
 
-const {width} = Dimensions.get('window');
-const itemWidth = (width - 40) / 2;
+// const {width} = Dimensions.get('window');
+// const itemWidth = (width - 40) / 2;
 
 const styles = StyleSheet.create({
   container: {
     padding: 10,
     borderRadius: 10,
-    minWidth: itemWidth,
-    maxWidth: itemWidth,
-    height: 130,
+    width: '100%',
+    // minWidth: itemWidth,
+    // maxWidth: itemWidth,
     margin: 5,
     backgroundColor: '#edc99d',
   },
@@ -27,8 +27,10 @@ const styles = StyleSheet.create({
     fontWeight: 'bold',
   },
   label: {
-    textAlign: 'center',
+    textAlign: 'left',
     fontSize: 16,
+    fontWeight: 'bold',
+    color: '#383838',
   },
   description: {
     marginVertical: 10,

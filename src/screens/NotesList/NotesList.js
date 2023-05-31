@@ -1,42 +1,58 @@
 import React, {useState} from 'react';
-import {FlatList, Text, TextInput, View} from 'react-native';
+import {FlatList, Pressable, Text, TextInput, View} from 'react-native';
+import Feather from 'react-native-vector-icons/Feather';
 import list from '../../../assets/data/list';
 import ListItems from '../../components/ListItems/ListItems';
 import styles from './styles';
 
 const NotesList = () => {
+  const [showTextField, setShowTextField] = useState(false);
   const [searchValue, setSearchValue] = useState('');
   return (
-    <View>
+    <View style={styles.conatiner}>
       {/* Header */}
       <View style={styles.header}>
-        <Text style={styles.headerText}>Notes App</Text>
+        <View>
+          <Text style={styles.headerText}>Notes</Text>
+        </View>
+        <Pressable style={styles.search} onPress={() => setShowTextField(true)}>
+          {showTextField ? (
+            <TextInput
+              style={styles.searchField}
+              onChange={setSearchValue}
+              value={searchValue}
+              name={'search'}
+              placeholder="Search for notes..."
+            />
+          ) : (
+            <Feather name="search" size={20} style={styles.searchIcons} />
+          )}
+        </Pressable>
       </View>
-
       {/* Search */}
       <View style={styles.body}>
-        <View style={styles.search}>
-          <TextInput
-            style={styles.searchField}
-            onChange={setSearchValue}
-            value={searchValue}
-            name={'search'}
-            placeholder="Search for notes..."
-          />
-        </View>
         {/* List */}
-        <View style={styles.list}>
-          <FlatList
-            key={list.map(item => item.id)}
-            columnWrapperStyle={styles.row}
-            numColumns={2}
-            data={list}
-            renderItem={({item}) => <ListItems item={item} />}
-            keyExtractor={item => item.id}
-            contentContainerStyle={styles.contentContainer}
-          />
+        <View style={styles.listHeaderContainer}>
+          <Text style={styles.listHeader}>List Notes</Text>
         </View>
+        <Pressable onPress={() => setShowTextField(false)}>
+          <Text>Back</Text>
+        </Pressable>
       </View>
+
+      <View style={{...styles.list, height: showTextField ? '85%' : '88%'}}>
+        <FlatList
+          key={list.map(item => item.id)}
+          // columnWrapperStyle={styles.row}
+          // numColumns={2}
+          data={list}
+          renderItem={({item}) => <ListItems item={item} />}
+          keyExtractor={item => item.id}
+          contentContainerStyle={styles.contentContainer}
+        />
+      </View>
+
+      {/* <AddButton /> */}
     </View>
   );
 };

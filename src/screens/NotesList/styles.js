@@ -1,39 +1,64 @@
 import {StyleSheet} from 'react-native';
 
 const styles = StyleSheet.create({
-  header: {
-    paddingVertical: 10,
-    borderBottomWidth: 0.2,
-  },
-  headerText: {
-    textAlign: 'center',
-    fontSize: 18,
-    fontWeight: 'bold',
-  },
-  body: {
+  conatiner: {
     paddingVertical: 20,
     marginHorizontal: 10,
+  },
+  header: {
+    paddingHorizontal: 10,
+    borderBottomWidth: 1,
+    borderBottomColor: '#dddddd9c',
+    display: 'flex',
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    alignContent: 'center',
+  },
+  headerText: {
+    textAlign: 'left',
+    fontSize: 18,
+    fontWeight: 'bold',
+    color: '#383838',
+  },
+  searchIcons: {
+    fontWeight: 'bold',
+    color: '#383838',
   },
   search: {
     marginBottom: 15,
   },
   searchField: {
+    width: 200,
     borderWidth: 1,
-    borderRadius: 20,
-    padding: 10,
-    fontSize: 18,
+    borderRadius: 10,
+    padding: 5,
+    fontSize: 14,
     fontWeight: 'medium',
-    borderColor: '#8a8888',
+    borderColor: '#ddd',
+  },
+  body: {
+    display: 'flex',
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'space-between',
+  },
+  listHeaderContainer: {
+    paddingHorizontal: 10,
+    paddingVertical: 15,
+  },
+  listHeader: {
+    fontSize: 16,
+    fontWeight: 'bold',
+    color: '#383838',
   },
   list: {
     width: '100%',
-    height: '88%',
   },
   row: {
     flex: 1,
     alignItems: 'center',
   },
-  contentContainer: {paddingBottom: 10},
+  contentContainer: {marginBottom: 10},
 });
 
 export default styles;
