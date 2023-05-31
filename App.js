@@ -1,13 +1,12 @@
 import React from 'react';
 import {StatusBar} from 'react-native';
-import NotesList from './src/screens/NotesList/NotesList';
+import Router from './src/navigation/Router';
 
 const App = () => {
   return (
     <>
       <StatusBar barStyle={'dark-content'} />
-      <NotesList />
-      {/* <AddNote /> */}
+      <Router />
     </>
   );
 };
