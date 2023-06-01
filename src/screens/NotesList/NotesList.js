@@ -43,7 +43,7 @@ const NotesList = () => {
           </Pressable>
         </View>
 
-        <View style={{...styles.list, height: showTextField ? '85%' : '88%'}}>
+        <View style={{...styles.list, height: showTextField ? '85%' : '86%'}}>
           <FlatList
             key={list.map(item => item.id)}
             // columnWrapperStyle={styles.row}
