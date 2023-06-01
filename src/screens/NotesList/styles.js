@@ -1,6 +1,9 @@
 import {StyleSheet} from 'react-native';
 
 const styles = StyleSheet.create({
+  paper: {
+    backgroundColor: '#fff',
+  },
   conatiner: {
     paddingVertical: 20,
     marginHorizontal: 10,

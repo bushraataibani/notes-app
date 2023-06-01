@@ -9,9 +9,9 @@ const Router = () => {
     <NavigationContainer>
       <Stack.Navigator>
         <Stack.Screen
-          name="Home"
+          name="Welcome"
           component={BottomTabNavigator}
-          options={{headerShown: false}}
+          options={{headerShown: false, cardStyle: {backgroundColor: '#fff'}}}
         />
       </Stack.Navigator>
     </NavigationContainer>

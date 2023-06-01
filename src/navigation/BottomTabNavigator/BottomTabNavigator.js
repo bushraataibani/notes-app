@@ -9,7 +9,17 @@ const Tab = createBottomTabNavigator();
 
 const BottomTabNavigator = () => {
   return (
-    <Tab.Navigator>
+    <Tab.Navigator
+      screenOptions={{
+        tabBarActiveTintColor: '#fff',
+        tabBarInactiveTintColor: '#999',
+        tabBarShowLabel: false,
+        tabBarStyle: {
+          backgroundColor: '#383838',
+          borderTopRightRadius: 20,
+          borderTopLeftRadius: 20,
+        },
+      }}>
       <Tab.Screen
         name={'Home'}
         component={NotesList}
