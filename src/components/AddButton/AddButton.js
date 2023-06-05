@@ -6,7 +6,7 @@ import styles from './styles';
 const AddButton = () => {
   return (
     <Pressable style={styles.button}>
-      <Entypo name="plus" size={25} />
+      <Entypo name="plus" size={25} style={styles.icon} />
     </Pressable>
   );
 };

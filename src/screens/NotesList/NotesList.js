@@ -4,6 +4,7 @@ import Feather from 'react-native-vector-icons/Feather';
 import list from '../../../assets/data/list';
 import ListItems from '../../components/ListItems/ListItems';
 import styles from './styles';
+import AddButton from '../../components/AddButton/AddButton';
 
 const NotesList = () => {
   const [showTextField, setShowTextField] = useState(false);
@@ -56,7 +57,7 @@ const NotesList = () => {
         </View>
       </View>
 
-      {/* <AddButton /> */}
+      <AddButton />
     </View>
   );
 };

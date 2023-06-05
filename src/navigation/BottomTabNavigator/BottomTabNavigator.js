@@ -15,7 +15,7 @@ const BottomTabNavigator = () => {
         tabBarInactiveTintColor: '#999',
         tabBarShowLabel: false,
         tabBarStyle: {
-          backgroundColor: '#383838',
+          backgroundColor: '#000000',
           borderTopRightRadius: 20,
           borderTopLeftRadius: 20,
         },
